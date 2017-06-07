@@ -1,0 +1,589 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+body{
+    font-family: 'Montserrat','NanumGothic';
+    background-image: url(../images/background1.jpg);
+    background-repeat: no-repeat;
+        background-size: cover;
+}
+
+
+div{
+    margin: 0 auto;
+    width: 480px;
+    height: 440px;
+    background-size: 100% 100%;
+    text-align: center;
+    background-repeat: no-repeat;
+}
+div:nth-child(3){
+    clear: both;
+}
+#clock_wrap{
+
+    margin: 0 auto;
+}
+#clock_wrap h1{
+    display: block;
+    position: relative;
+    background-image: url(../images/current_time_kr.png);
+    background-repeat: no-repeat;
+    background-size: 50% 50%;
+    width: 387px;
+    height: 98px;
+    margin-left: 140px;
+    margin-top: 180px;
+
+}
+#current{
+    display: block;
+    background-image: url(../images/currnet_time.png);
+    background-repeat: no-repeat;
+    background-size: 50% 50%;
+    width: 90px;
+    height: 780px;
+    margin-left: -60px;
+
+
+}
+#current_end{
+    position: relative;
+    z-index: 100;
+    display: block;
+    background-image: url(../images/current_end.png);
+    background-repeat: no-repeat;
+    background-size: 45% 45%;
+    width: 240px;
+    height: 93px;
+    margin-top: -325px;
+    margin-right: -160px;
+    float: right;
+
+}
+#clock{
+
+    position: relative;
+    z-index: 100;
+    margin-top: -820px;
+    background-image: url(../images/clock.jpg);
+    padding-top: 60px;
+    font-size: 70px;
+    font-weight: lighter;
+    text-shadow: 0px 1px 20px rgba(11,12,12,0.2);
+    box-shadow: 0px 1px 20px rgba(11,12,12,0.2);
+    border-radius: 10px;
+}
+#clock #circle{
+    border-radius: 100%;
+    background-color: white;
+    width: 250px;
+    height: 250px;
+    opacity: 0.3;
+    position: relative;
+    z-index: 1;
+}
+
+#clock #circle:hover{
+    box-shadow: 0px 1px 30px rgba(255,255,255,1);
+}
+
+#clock span{
+    display: inline-block;
+    margin-top: 10px;
+    color: black;
+
+}
+
+#clock #sec{
+    display: block;
+    margin-top: 10px;
+    font-size: 15px;
+
+}
+#clock #month
+,#clock #date{
+    font-size: 15px;
+    letter-spacing: 9px;
+
+}
+#clock ul{
+    margin-left: 25px;
+    width: 400px;
+    height: 50%;
+    margin-top: 85px;
+
+}
+#clock ul li{
+    margin: 0 auto;
+    float: left;
+    border-radius: 100%;
+    margin-left: 60px;
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    box-shadow: 0px 1px 20px rgba(11,12,12,0.2);
+    font-size: 10px;
+}
+
+#clock ul li.alarm:hover{
+    box-shadow: 0px 1px 35px rgba(96,10,174,0.3);
+    transform: scale(1.2);
+    content: url(../images/alarm_icon_Txt.png);
+}
+#clock ul li.sw:hover{
+    box-shadow: 0px 1px 35px rgba(7,130,103,0.3);
+    transform: scale(1.2);
+    content: url(../images/stopwatch_Txt.png);
+}
+#clock ul li img{
+    width: 55px;
+    height: 55px;
+}
+
+
+#clock ul li.wc{
+    height: 59px;
+    padding-top: 1px;
+}
+#clock ul li.wc:hover{
+    box-shadow: 0px 1px 35px rgba(96,10,174,0.3);
+    transform: scale(1.2);
+    content: url(../images/world_Clock_txt.png);
+}
+
+/*-----------------------alarm-------------------------*/
+#alarm_wrap{
+    margin: 0 auto;
+}
+#alarm_wrap span#alarm_txt{
+    float: right;
+    width: 150px;
+    height: 55px;
+    display: block;
+    background-image: url(../images/alarm_time_3.png);
+    background-size: 100% 100%;
+    margin-top: -155px;
+
+}
+#alarm_wrap span#alarm_txt2{
+    float: left;
+    width: 65px;
+    height: 190px;
+    display: block;
+    background-image: url(../images/alarm_time_2.png);
+    background-size: 100% 100%;
+    margin: 50px 0 0 -60px;
+
+
+}
+#alarm_box{
+    display: none;
+    margin-top: 260px;
+    margin-left: -100px;
+    padding-top: 100px;
+    width: 700px;
+    height: 400px;
+    position: relative;
+    z-index: 10;
+    background-image: url(../images/alarm.jpg);
+    border-radius: 10px;
+    box-shadow: 0px 1px 20px rgba(11,12,12,0.2);
+    font-size: 45px;
+    font-weight: lighter;
+}
+#alarm_box h1{
+    background-image: url(../images/alarm_time.png);
+    background-repeat: no-repeat;
+    background-size: 70% 70%;
+    width: 250px;
+    height: 65px;
+    margin-left: 120px;
+    margin-top: 40px;
+    position: relative;
+    z-index: 10;
+}
+
+#alarm_box #circle2{
+    display: block;
+    border-radius: 100%;
+    background-color: white;
+    width: 250px;
+    height: 250px;
+    opacity: 0.3;
+    box-shadow: 0px 1px 20px rgba(11,12,12,0.2);
+    margin-left: 80px;
+    margin-top: -50px;
+}
+#alarm_box #circle2 span{
+    display: inline-block;
+    margin-top: 90px;
+    font-size: 58px;
+}
+#alarm_box #alarm_bt{
+    float: right;
+    margin-top: -200px;
+    margin-right: 100px;
+
+}
+#alarm_box #alarm_bt li{
+    float: left;
+    margin-right: 12px;
+    width: 85px;
+    height: 35px;
+    background-color: lightgray;
+    border-radius: 13px;
+    font-size: 16px;
+    line-height: 34px;
+}
+#alarm_box #alarm_bt li:hover{
+    background-color: #ff9295;
+}
+#alarm_box #alarm_bt li.active{
+    background-color: #ff9295;
+}
+#alarm_box form {
+    font-size: 18px;
+    line-height: 30px;
+    text-align: left;
+    float: right;
+    margin-right: 130px;
+    margin-top: -150px;
+    color: dimgray;
+}
+
+#alarm_box ol{
+    margin: 0 0 0 30px;
+    width: 400px;
+    height: 50%;
+
+}
+#alarm_box ol li{
+    margin: 0 auto;
+    margin-top: 50px;
+    float: left;
+    border-radius: 100%;
+    margin-left: 60px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    background-color: white;
+    box-shadow: 0px 1px 20px rgba(11,12,12,0.2);
+    font-size: 10px;
+}
+#alarm_wrap ol{
+    display: inline-block;
+    float: right;
+    margin-right: -160px;
+    margin-top: -300px;
+}
+#alarm_wrap ol li{
+    width: 15px;
+    height: 15px;
+    margin-top: 15px;
+    border-radius: 100%;
+    background-color: white;
+    font-size: 0px;
+    color: transparent;
+    text-indent: -9999px;
+}
+#alarm_wrap ol li:hover
+,#alarm_wrap ol li.active{
+    background-color: #ffa9ab;
+}
+#alarm_Set_h{
+	  width: 180px;
+		height: 30px;
+	  display: block;
+		margin-top: -130px;
+		margin-left: 405px;
+	  font-size: 17px;
+		line-height: 32px;
+		border-radius: 10px;
+		background-color: white;
+}
+#alarm_Set_m{
+		width: 180px;
+		height: 30px;
+		display: block;
+		margin-top: 20px;
+		margin-left: 405px;
+		font-size: 17px;
+		line-height: 32px;
+		border-radius: 10px;
+		background-color: white;
+}
+/*----------------------stopwatch------------------------*/
+#stopwatch_wrap{
+    position: relative;
+    margin: 0 auto;
+    display: none;
+}
+#stopwatch_wrap h1{
+    display: block;
+    background-image: url(../images/stop_watch_kr.png);
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    width: 280px;
+    height: 85px;
+    margin: 0 auto;
+    margin-top: -255px;
+    margin-left: 170px;
+
+}
+#stopwatch{
+    position: relative;
+    margin-top: -30px;
+    padding-top: 100px;
+    height: 400px;
+    background-image: url(../images/three.jpg);
+	font-weight: lighter;
+	text-shadow: 0px 1px 20px rgba(11,12,12,0.2);
+	box-shadow: 0px 1px 20px rgba(11,12,12,0.2);
+    border-radius: 10px;
+}
+#stopwatch span{
+    display: inline-block;
+    margin-top: 105px;
+    font-size: 50px;
+    position: relative;
+    color: #535353;
+}
+
+#stopwatch #circle3{
+    border-radius: 100%;
+    background-color: white;
+    width: 250px;
+    height: 250px;
+    margin-top: -165px;
+    opacity: 0.3;
+    box-shadow: 0px 1px 20px rgba(11,12,12,0.2);
+}
+#stopwatch #circle3_line{
+    display: block;
+    border-radius: 100%;
+    width: 250px;
+    height: 250px;
+    margin-top : -140px;
+    box-shadow: 0px 1px 35px rgba(0,174,255,1);
+}
+
+
+#stopwatch ul#sw_button{
+    display: block;
+    margin: -20px 0 0 0;
+    width: 400px;
+    height: 50%;
+
+}
+#stopwatch ul#sw_button li{
+    margin: 0 auto;
+    margin-top: 70px;
+    float: left;
+    border-radius: 100%;
+    margin-left: 60px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: white;
+    box-shadow: 0px 1px 20px rgba(11,12,12,0.2);
+    font-size: 10px;
+    color: #535353;
+}
+#stopwatch ul#sw_button li:hover{
+	box-shadow: 0px 1px 35px rgba(0,174,255,0.8);
+	transform: scale(1.2);
+    font-weight: 500;
+    color: #00aeff;
+}
+#stopwatch ul#lap3{
+    overflow: scroll;
+    display: block;
+    width: 420px;
+    height: 60px;
+    margin: 0 auto;
+
+    border-radius: 0;
+    background-color: white;
+    box-shadow: 0px 1px 20px rgba(11,12,12,0.2);
+}
+#stopwatch ul#lap3 li{
+    width: 100px;
+    height: 20px;
+    border-radius: 10px;
+    text-align: center;
+    float: left;
+    color: #727373;
+
+}
+#stopwatch ul#lap3 li:first-child{
+    display: inline-block;
+    padding-top: 10px;
+    font-weight: 500;
+
+}
+#stopwatch span#lap3{
+	display: inline-block;
+	margin-top: -30px;
+    width: 100px;
+	height: 40px;
+	overflow: scroll;
+	font-size: 15px;
+}
+
+#stopwatch_txt{
+    display: block;
+    background-image: url(../images/stop_watch.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 53px;
+    height: 245px;
+    margin-top: -350px;
+    margin-left: -60px;
+
+}
+#stopwatch_wrap ol{
+    display: block;
+    margin-top: -200px;
+    margin-left: 495px;
+}
+#stopwatch_wrap ol li{
+    width: 15px;
+    height: 15px;
+    margin-top: 15px;
+    border-radius: 100%;
+    background-color: white;
+    font-size: 0px;
+    color: transparent;
+    text-indent: -9999px;
+}
+#stopwatch_wrap ol li:hover
+,#stopwatch_wrap ol li.active{
+    background-color: #24beea;
+}
+
+/*------------------------worldclock------------------------------*/
+#worldclock{
+    display: none;
+    margin: 0 auto;
+    margin-top: -400px; 
+    width: 750px;
+    height: 550px;
+    border-radius: 10px;
+    background-image: url(../images/world_Clock_wrap.png);
+}
+#ny_time{
+    position: relative;
+    margin-top: -200px;
+    margin-left: -185px;
+    padding-top: 15px;
+    font-size: 50px;
+    font-weight: lighter;
+    line-height: 195px;
+    color: #4e5e66;
+}
+#circle4
+,#circle5
+,#circle6{
+    display: block;
+    border-radius: 100%;
+    background-color: white;
+    margin: -245px 0 0 145px;
+    width: 200px;
+    height: 200px;
+    opacity: 0.3;
+    box-shadow: 0px 1px 20px rgba(11,12,12,0.2);   
+}
+#ld_time{
+    position: relative;
+    margin-left: 30px;
+    margin-top: -435px;
+    font-size: 50px;
+    font-weight: lighter;
+    line-height: 195px;
+    color: #4e5e66;
+}
+
+#ps_time{
+    position: relative;
+    margin-left: 240px;
+    margin-top: -435px;
+    font-size: 50px;
+    font-weight: lighter;
+    line-height: 195px;
+    color: #4e5e66;
+}
+#circle5
+,#circle6{
+    margin-left: 138px;
+}
+
+#worldclock_wrap #sec4
+,#worldclock_wrap #sec5
+,#worldclock_wrap #sec6{
+    display: block;
+    margin-top: -145px;
+    font-size: 15px;
+}
+
+#worldclock ol{
+    display: block;
+    padding-top: 190px;
+    margin-top: 150px;
+    margin-left: 725px;
+}
+#worldclock ol li{
+    width: 15px;
+    height: 15px;
+    margin-top: 15px;
+    border-radius: 100%;
+    background-color: white;
+    font-size: 0px;
+    color: transparent;
+    text-indent: -9999px;
+}
+#worldclock ol li:hover{
+    background-color: #ba95eb;
+}
+#worldclock ol li.active{
+    background-color: #ba95eb;
+}
+

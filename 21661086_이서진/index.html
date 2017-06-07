@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Interaction Programming - week 12-1</title>
+    <link href="css/main.css" rel="stylesheet"/>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/script2.js"></script>
+
+
+  </head>
+  <body>
+    <div id="clock_wrap">
+    <h1></h1>
+    <span id="current"></span>
+    <div id="clock">
+       <div id="circle">
+         <span id="month">month&amp;</span><span id="date">date</span><p><span id="hour">00</span>:<span id="min">00</span><br><span id="sec">00</span>
+        </div>
+       <ul>
+           <li class="alarm">
+               <img src="images/alarm_icon.png">
+           </li>
+           <li class="sw">
+               <img src="images/stopwatch.png">
+           </li>
+           <li class="wc">
+               <img src="images/world_Clock.png">
+           </li>
+       </ul>
+    </div>
+    <span id="current_end"></span>
+    </div>
+
+    <div id="alarm_wrap">
+    <div id="alarm_box">
+        <span id="alarm_txt"></span>
+        <span id="alarm_txt2"></span>
+        <h1></h1>
+        <div id="circle2">
+           <span id="hour2"></span>:<span id="min2"></span>
+        </div>
+        <ul id="alarm_bt">
+            <li id="alarm_Start">Turn on</li>
+            <li id="alarm_Clear" class="active">Turn off</li>
+        </ul>
+        <span id="alarm_Set_h">Hour SET</span>
+        <span id="alarm_Set_m">Min SET</span>
+
+    </div>
+    <ol id="ol_one">
+        <li class="one">CLOCK</li>
+        <li class="active">ALARM</li>
+        <li class="three">STOPWATCH</li>
+        <li class="four">WORLD CLOCK</li>
+    </ol>
+    </div>
+
+    <div id="stopwatch_wrap">
+    <h1></h1>
+    <div id="stopwatch">
+         <span id="hour3">00</span>:<span id="min3">00</span>:<span id="sec3">00</span>
+
+         <div id="circle3"><span id="circle3_line"></span></div>
+         <ul id="sw_button">
+            <li id="start3">start</li>
+            <li id="stop3">stop</li>
+            <li id="reset">reset</li>
+            <li id="lap">lap</li>
+         </ul>
+         <ul id="lap3">
+            <li>Laptime</li>
+         </ul>
+        </div>
+    <span id="stopwatch_txt"></span>
+    <ol>
+        <li class="one">CLOCK</li>
+        <li class="two">ALARM</li>
+        <li class="active">STOPWATCH</li>
+        <li class="four">WORLD CLOCK</li>
+    </ol>
+    </div>
+    
+    <div id="worldclock">   
+       <div id="worldclock_wrap">
+        <ol>
+           <li class="one">CLOCK</li>
+           <li class="two">ALARM</li>
+           <li class="three">STOPWATCH</li>
+           <li class="active">WORLD CLOCK</li>
+        </ol>
+        <div id="ny_time">
+            <span id="hour4">00</span>:<span id="min4">00</span><br><span id="sec4">00</span>
+            <span id="circle4"></span>
+        </div>   
+        <div id="ld_time">
+            <span id="hour5">00</span>:<span id="min5">00</span><br><span id="sec5">00</span>
+            <span id="circle5"></span>
+        </div> 
+        <div id="ps_time">
+            <span id="hour6">00</span>:<span id="min6">00</span><br><span id="sec6">00</span>
+            <span id="circle6"></span>
+        </div>  
+    </div> 
+    </div>
+    
+        
+
+  </body>
+</html>

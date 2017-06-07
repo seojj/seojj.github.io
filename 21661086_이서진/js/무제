@@ -1,0 +1,3 @@
+var time = new Date();
+                                       //13시간전
+var nytime = new Date(time.getTime() - (13*60*60*1000))
