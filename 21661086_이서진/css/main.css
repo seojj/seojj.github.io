@@ -333,12 +333,12 @@ div:nth-child(3){
 	  width: 180px;
 		height: 30px;
 	  display: block;
-		margin-top: -130px;
+		margin-top: -170px;
 		margin-left: 405px;
 	  font-size: 17px;
 		line-height: 32px;
 		border-radius: 10px;
-		background-color: white;
+		background-color: #ffa9ab;
 }
 #alarm_Set_m{
 		width: 180px;
@@ -349,7 +349,7 @@ div:nth-child(3){
 		font-size: 17px;
 		line-height: 32px;
 		border-radius: 10px;
-		background-color: white;
+		background-color: #ffa9ab;
 }
 /*----------------------stopwatch------------------------*/
 #stopwatch_wrap{
@@ -483,7 +483,7 @@ div:nth-child(3){
 #stopwatch_wrap ol{
     display: block;
     margin-top: -200px;
-    margin-left: 495px;
+    margin-left: 595px;
 }
 #stopwatch_wrap ol li{
     width: 15px;
@@ -504,7 +504,7 @@ div:nth-child(3){
 #worldclock{
     display: none;
     margin: 0 auto;
-    margin-top: -400px; 
+    margin-top: -400px;
     width: 750px;
     height: 550px;
     border-radius: 10px;
@@ -526,11 +526,11 @@ div:nth-child(3){
     display: block;
     border-radius: 100%;
     background-color: white;
-    margin: -245px 0 0 145px;
+    margin: -205px 0 0 145px;
     width: 200px;
     height: 200px;
     opacity: 0.3;
-    box-shadow: 0px 1px 20px rgba(11,12,12,0.2);   
+    box-shadow: 0px 1px 20px rgba(11,12,12,0.2);
 }
 #ld_time{
     position: relative;
@@ -586,4 +586,3 @@ div:nth-child(3){
 #worldclock ol li.active{
     background-color: #ba95eb;
 }
-

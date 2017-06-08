@@ -44,12 +44,13 @@ var init = function(){
   var sound = new Audio('sound.mp3');
   // 알람 실행 여부
   var isAlarmed = false;
-    
+
      // 알람 Turn on 버튼 클릭 시 실행되는 함수
+
     function AlarmStart(){
       if( isAlarmed === false && Input_h == parseInt(hour2.innerHTML,10)&& Input_m == parseInt(min2.innerHTML,10) && !isAlarmed){
       sound.play();
-      isAlarmed = true;
+      isAlarmed === true;
       }
     }
     // 알람 Turn off 버튼 클릭 시 실행되는 함수
@@ -58,6 +59,7 @@ var init = function(){
       alarm_Set_h.innerHTML = 'Hour SET';
       alarm_Set_m.innerHTML = 'Min SET';
       sound.pause();
+
       }
     }
 
@@ -82,10 +84,11 @@ var init = function(){
         confirm('숫자만 입력해주세요');
       }else if(Input_m >= 60){
         confirm('59이하로 입력해주세요.');
-      }else if (Input_m <=0) {
+      }else if (Input_m <0) {
         confirm('0이상으로 입력해주세요');
       }else {
         alarm_Set_m.innerHTML = Input_m;
+        sound.pause();
       }
     }
 
@@ -196,9 +199,9 @@ var init = function(){
   var sec5 = document.getElementById('sec5');
   var hour6 = document.getElementById('hour6');
   var min6 = document.getElementById('min6');
-  var sec6 = document.getElementById('sec6');   
+  var sec6 = document.getElementById('sec6');
 
-                                        
+
   // 우리 지역 현재시간으로부터 13시간 이전의 시간 정보를 담고있다. (뉴욕)
   var nytime = new Date(time4.getTime() - (13 * 60 * 60 * 1000))
 
@@ -208,7 +211,7 @@ var init = function(){
     sec4.innerHTML = addZero(nytime.getSeconds());
   }
   setInterval(intervalHandler4,1000);
-    
+
   // 8시간 이전의 시간 정보를 담고 있다.(런던)
     var ldtime = new Date(time4.getTime() - (8 * 60 * 60 * 1000))
 
@@ -225,7 +228,7 @@ var init = function(){
     hour6.innerHTML = addZero(pstime.getHours());
     min6.innerHTML = addZero(pstime.getMinutes());
     sec6.innerHTML = addZero(pstime.getSeconds());
-    
+
   }
   setInterval(intervalHandler6,1000);
 
@@ -238,7 +241,7 @@ var init = function(){
   reset.addEventListener('click',resetAction);
   alarmSet_h.addEventListener('click',AlarmSet_h);
   alarmSet_m.addEventListener('click',AlarmSet_m);
-  alarmStart.addEventListener('click',AlarmStart);
+  //alarmStart.addEventListener('click',AlarmStart);
   alarmClear.addEventListener('click',AlarmClear);
 
 };
